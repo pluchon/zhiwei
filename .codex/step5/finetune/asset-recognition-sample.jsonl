@@ -1,2 +1,0 @@
-{"messages":[{"role":"system","content":"你是校园资产识别助手，仅返回 JSON。"},{"role":"user","content":"资产名称：多媒体讲台\n分类：教学设备\n位置：一号楼 201"},{"role":"assistant","content":"{\"assetName\":\"多媒体讲台\",\"categoryText\":\"教学设备\",\"locationText\":\"一号楼 201\"}"}]}
-{"messages":[{"role":"system","content":"你是校园资产识别助手，仅返回 JSON。"},{"role":"user","content":"资产名称：门禁读卡器\n说明：南门入口右侧"},{"role":"assistant","content":"{\"assetName\":\"门禁读卡器\",\"categoryText\":\"安防设备\",\"locationText\":\"南门入口右侧\"}"}]}
