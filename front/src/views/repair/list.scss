@@ -1,0 +1,285 @@
+.filter-form {
+  margin-bottom: 8px;
+}
+
+.order-no-input :deep(.el-input-group__prepend) {
+  padding: 0 12px;
+  color: #475569;
+  background: #f8fafc;
+}
+
+.list-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.list-toolbar__filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #5f6f6b;
+  min-width: 0;
+}
+
+.list-toolbar__filters .el-check-tag {
+  cursor: pointer;
+}
+
+.list-toolbar__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 16px;
+}
+
+.filter-grid--advanced {
+  margin-top: 2px;
+  padding-top: 8px;
+  border-top: 1px dashed #e2e8f0;
+
+  :deep(.el-form-item__label) {
+    white-space: nowrap;
+  }
+}
+
+.filter-span-2 {
+  grid-column: span 2;
+}
+
+.filter-long-stagnant {
+  min-width: 0;
+}
+
+.filter-grid :deep(.el-form-item) {
+  margin-bottom: 12px;
+}
+
+.filter-grid :deep(.el-select),
+.filter-grid :deep(.el-input),
+.filter-grid :deep(.el-date-editor) {
+  width: 100%;
+}
+
+.filter-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 2px;
+  margin-bottom: 8px;
+}
+
+.filter-more-btn {
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 13px;
+}
+
+.filter-more-btn__icon {
+  margin-left: 2px;
+  transition: transform 0.2s ease;
+
+  &.is-open {
+    transform: rotate(180deg);
+  }
+}
+
+.export-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.export-bar__main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-width: 0;
+}
+
+.export-bar__count {
+  font-weight: 600;
+  color: #153d3b;
+  margin-right: 2px;
+}
+
+.export-btn-select-page {
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+  background: #eff6ff;
+
+  &:hover,
+  &:focus {
+    color: #1e40af;
+    border-color: #93c5fd;
+    background: #dbeafe;
+  }
+}
+
+.export-btn-clear {
+  color: #b45309;
+  border-color: #fcd34d;
+  background: #fffbeb;
+
+  &:hover,
+  &:focus {
+    color: #92400e;
+    border-color: #fbbf24;
+    background: #fef3c7;
+  }
+}
+
+.export-btn-cancel {
+  flex-shrink: 0;
+  margin-left: auto;
+  color: #dc2626;
+  border-color: #fecaca;
+  background: #fef2f2;
+
+  &:hover,
+  &:focus {
+    color: #b91c1c;
+    border-color: #fca5a5;
+    background: #fee2e2;
+  }
+}
+
+.repair-list--reporter .repair-list-table {
+  :deep(.el-table__header th),
+  :deep(.el-table__body td) {
+    padding: 14px 0;
+  }
+
+  :deep(.el-table__header th .cell),
+  :deep(.el-table__body td .cell) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.list-error {
+  margin-bottom: 12px;
+}
+
+.repair-list-table {
+  width: 100%;
+
+  :deep(.el-table__header th) {
+    background: #f8fafc;
+  }
+
+  :deep(.el-table__body td .cell) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  :deep(.asset-no-column .cell) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.title-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.title-cell__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.stagnant-tag {
+  flex-shrink: 0;
+}
+
+.user-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+
+  > span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.sub-text {
+  font-size: 12px;
+  color: #8c9996;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.export-mode :deep(.el-table__row) {
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filter-span-2 {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-span-2 {
+    grid-column: span 1;
+  }
+
+  .list-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .list-toolbar__actions {
+    margin-left: 0;
+    justify-content: flex-end;
+  }
+
+  .export-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .export-btn-cancel {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600&display=swap");
+
+.auth-page {
+  --ink: #0a1816;
+  --teal: #1f6b62;
+  --glass: rgba(248, 252, 251, 0.96);
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --text-muted: rgba(237, 246, 244, 0.62);
+
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: "Outfit", "PingFang SC", "Microsoft YaHei", sans-serif;
+  overflow: hidden;
+}
+
+.auth-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 20% 15%, rgba(47, 120, 108, 0.28), transparent 55%),
+    linear-gradient(145deg, #061210 0%, #0c221f 48%, #102e2a 100%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.18;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}
+
+.auth-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 520px);
+  padding: 32px 32px 28px;
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 28px 64px rgba(5, 18, 16, 0.38);
+}
+
+.auth-card__head {
+  margin-bottom: 24px;
+
+  h1 {
+    margin: 0 0 6px;
+    font-family: "Cormorant Garamond", "Songti SC", serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #5c6f6b;
+  }
+}
+
+.auth-steps {
+  margin-bottom: 28px;
+
+  :deep(.el-step__title) {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  :deep(.el-step__head.is-process) {
+    color: var(--teal);
+    border-color: var(--teal);
+  }
+
+  :deep(.el-step__head.is-success) {
+    color: var(--teal);
+    border-color: var(--teal);
+  }
+}
+
+.auth-form {
+  :deep(.el-form-item__label) {
+    padding-bottom: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #3d524e;
+  }
+
+  :deep(.el-input__wrapper) {
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px rgba(15, 40, 36, 0.1) inset;
+    background: rgba(255, 255, 255, 0.9);
+
+    &.is-focus {
+      box-shadow: 0 0 0 2px rgba(31, 107, 98, 0.4) inset;
+    }
+  }
+}
+
+.auth-alert {
+  margin-bottom: 16px;
+}
+
+.sms-code-row {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+
+  :deep(.el-input) {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.sms-code-btn {
+  flex: 0 0 auto;
+  height: 40px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(31, 107, 98, 0.1);
+  color: var(--teal);
+  font-weight: 600;
+
+  &:hover {
+    background: rgba(31, 107, 98, 0.16);
+    color: #165049;
+  }
+}
+
+.auth-inline-row {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+
+  :deep(.el-input) {
+    flex: 1;
+    min-width: 0;
+  }
+
+  :deep(.captcha-verify--compact) {
+    flex: 0 0 auto;
+    min-width: 72px;
+    padding: 0 14px;
+  }
+}
+
+.auth-captcha-row {
+  display: flex;
+  justify-content: flex-end;
+  margin: 4px 0 16px;
+}
+
+.auth-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+
+  .el-button--primary {
+    flex: 1;
+    height: 42px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1a5c54 0%, #237a6f 100%);
+    font-weight: 600;
+  }
+}
+
+.auth-back {
+  display: inline-flex;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--teal);
+  text-decoration: none;
+
+  &:hover {
+    color: #165049;
+  }
+}
+
+@media (max-width: 560px) {
+  .auth-card {
+    padding: 26px 20px 22px;
+  }
+}

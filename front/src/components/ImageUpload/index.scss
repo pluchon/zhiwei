@@ -1,0 +1,8 @@
+// .el-upload--picture-card 控制加号部分
+:deep(.hide .el-upload--picture-card) {
+  display: none;
+}
+
+:deep(.el-upload.el-upload--picture-card.is-disabled) {
+  display: none !important;
+}

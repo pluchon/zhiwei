@@ -1,0 +1,142 @@
+.repair-create-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 8px 0 24px;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-section {
+  padding: 18px 20px;
+  border: 1px solid #dbe7e3;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(39, 132, 117, 0.05);
+}
+
+.form-section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+
+  h3 {
+    margin: 0;
+    color: #17342f;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+.form-section__hint {
+  color: #8aa29a;
+  font-size: 12px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 20px;
+}
+
+.form-grid--location {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.form-grid__full {
+  grid-column: 1 / -1;
+}
+
+.form-grid__wide {
+  grid-column: span 2;
+}
+
+.form-grid :deep(.el-form-item) {
+  margin-bottom: 14px;
+}
+
+.form-grid :deep(.el-select),
+.form-grid :deep(.el-input) {
+  width: 100%;
+}
+
+.workforce-tip {
+  margin-top: 2px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f4faf8;
+  color: #4f6660;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.asset-summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #e5ece9;
+  border-radius: 10px;
+  background: #f8fbfa;
+
+  strong {
+    margin-right: 8px;
+    color: #17342f;
+  }
+
+  span {
+    color: #4f6660;
+  }
+}
+
+.sub-text {
+  margin: 6px 0 0;
+  color: #8aa29a;
+  font-size: 13px;
+}
+
+.location-note {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 2px 0 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f7faf9;
+  color: #72827e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.photo-upload :deep(.el-upload--picture-card) {
+  width: 96px;
+  height: 96px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 4px 2px 0;
+}
+
+.asset-table {
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .form-grid,
+  .form-grid--location {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid__wide {
+    grid-column: auto;
+  }
+}

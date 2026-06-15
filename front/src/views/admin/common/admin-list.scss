@@ -1,0 +1,184 @@
+.admin-list-page {
+  padding-top: 16px;
+}
+
+.admin-list-card {
+  border: 1px solid rgba(39, 132, 117, 0.1);
+  border-radius: 16px;
+}
+
+.admin-list-card :deep(.el-card__body) {
+  padding: 16px 18px 18px;
+}
+
+.filter-form {
+  margin-bottom: 4px;
+}
+
+.filter-row-single {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.filter-row-single .filter-grid--inline {
+  flex: 1;
+  min-width: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 16px;
+}
+
+.filter-row-single .filter-grid--inline :deep(.el-form-item) {
+  margin-bottom: 0;
+}
+
+.filter-row-single .filter-actions {
+  padding-top: 0;
+  margin-left: auto;
+}
+
+@media (max-width: 1200px) {
+  .filter-row-single {
+    flex-wrap: wrap;
+  }
+
+  .filter-row-single .filter-grid--inline {
+    flex: 1 1 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filter-row-single .filter-grid--inline .filter-span-2 {
+    grid-column: span 2;
+  }
+
+  .filter-row-single .filter-actions {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .filter-row-single .filter-grid--inline {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-row-single .filter-grid--inline .filter-span-2 {
+    grid-column: span 1;
+  }
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 16px;
+  min-width: 0;
+}
+
+.filter-grid--primary {
+  margin-bottom: 12px;
+}
+
+.filter-row-secondary {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.filter-grid--secondary {
+  flex: 1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.filter-span-2 {
+  grid-column: span 2;
+}
+
+.filter-grid :deep(.el-form-item) {
+  margin-bottom: 0;
+}
+
+.filter-grid--primary :deep(.el-form-item) {
+  margin-bottom: 12px;
+}
+
+.filter-grid :deep(.el-select),
+.filter-grid :deep(.el-input),
+.filter-grid :deep(.el-date-editor) {
+  width: 100%;
+}
+
+.filter-checkbox-item :deep(.el-form-item__content) {
+  min-height: 32px;
+  align-items: center;
+}
+
+.filter-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+
+.admin-data-table {
+  width: 100%;
+
+  :deep(.el-table__header th) {
+    background: #f8fafc;
+  }
+
+  :deep(.el-table__body td .cell) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sub-text {
+  color: #909399;
+  font-size: 12px;
+}
+
+@media (max-width: 1100px) {
+  .filter-grid,
+  .filter-grid--secondary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filter-span-2 {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 900px) {
+  .filter-row-secondary {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-actions {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .filter-grid,
+  .filter-grid--secondary {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-span-2 {
+    grid-column: span 1;
+  }
+}

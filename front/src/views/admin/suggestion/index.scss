@@ -1,0 +1,49 @@
+.suggestion-admin {
+  padding-top: 16px;
+}
+
+.suggestion-filter-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.suggestion-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.suggestion-detail-table th,
+.suggestion-detail-table td {
+  padding: 12px 14px;
+  border: 1px solid var(--campus-border, #d5dbe3);
+  color: var(--campus-ink, #1a2332);
+  font-size: 13px;
+  line-height: 1.6;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+.suggestion-detail-table th {
+  width: 96px;
+  background: #f8fafc;
+  color: var(--campus-ink-muted, #6b7280);
+  font-weight: 500;
+  text-align: left;
+}
+
+.suggestion-detail-table .avatar-cell {
+  width: 112px;
+  padding: 14px;
+  text-align: center;
+  vertical-align: middle;
+  background: #fff;
+}
+
+.repairer-avatar {
+  display: block;
+  margin: 0 auto;
+}
+
+.suggestion-detail-dialog :deep(.el-dialog__body) {
+  padding-top: 8px;
+}

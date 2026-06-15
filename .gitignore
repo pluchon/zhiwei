@@ -1,0 +1,82 @@
+# 本地密钥与环境配置
+/.env
+/.env.*
+!/.env.example
+**/.env.local
+**/.env.*.local
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*secret*.yml
+*secret*.yaml
+*secret*.properties
+
+# Java / Maven
+**/target/
+*.class
+*.jar
+*.war
+!**/.mvn/wrapper/maven-wrapper.jar
+*.log
+hs_err_pid*
+replay_pid*
+
+# Node / Vite
+**/node_modules/
+**/dist/
+**/.vite/
+**/coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 运行日志与浏览器测试产物
+**/logs/
+/.playwright-mcp/
+**/playwright-report/
+**/playwright-output/
+**/test-results/
+!/.codex/test-results/
+!/.codex/test-results/*.md
+!/.codex/test-results/*.mjs
+!/.codex/test-results/*.js
+!/.codex/test-results/*.sql
+/.codex/test-results/*result.json
+/.codex/step*/test-fixtures/evidence-*.png
+/.codex/step*/test-fixtures/test-results/
+
+# 数据库导出、临时导入与测试文件
+*.sql.gz
+*.dump
+*.bak
+/.test-assets-*
+/test-image.*
+/create-test-import-xlsx.py
+
+# IDE 与本地工具
+/.idea/
+/.vscode/
+/.cursor/
+/.agents/
+*.iml
+*.iws
+*.ipr
+*.suo
+*.user
+*.local
+/skills-lock.json
+**/.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 临时文件
+*.tmp
+*.temp
+*.swp
+*.swo
+*.orig
+*~

@@ -1,0 +1,58 @@
+.page-head span {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: #278475;
+}
+.page-head h2 {
+  font:
+    34px Georgia,
+    serif;
+  color: #153d3b;
+  margin: 6px 0 22px;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 16px;
+  border-bottom: 1px solid #e8eeeb;
+  cursor: pointer;
+}
+
+.notice-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.notice-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.notice.unread {
+  background: #eff8f4;
+  border-left: 3px solid #278475;
+}
+.notice p {
+  margin: 8px 0 0;
+  color: #6b7b77;
+}
+.notice time {
+  font-size: 12px;
+  color: #8c9996;
+}

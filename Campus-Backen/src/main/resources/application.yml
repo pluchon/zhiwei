@@ -1,0 +1,72 @@
+spring:
+  application:
+    name: campus-system
+  datasource:
+    url: ${CAMPUS_DB_URL:jdbc:mysql://localhost:3307/campus_system?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false}
+    username: ${CAMPUS_DB_USERNAME:campus}
+    password: ${CAMPUS_DB_PASSWORD:campus123}
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 100MB
+  mail:
+    host: ${SMTP_HOST:smtp.qq.com}
+    port: ${SMTP_PORT:465}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.ssl.enable: true
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY:}
+      chat:
+        options:
+          model: qwen-plus
+          temperature: 0.3
+
+server:
+  port: ${SERVER_PORT:8080}
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleteState
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+
+campus:
+  jwt:
+    secret: ${JWT_SECRET:change-this-development-secret-at-least-32-bytes}
+    ttl-days: 14
+  verification:
+    expose-code: ${EXPOSE_VERIFICATION_CODE:true}
+  aliyun:
+    access-key-id: ${ALIYUN_ACCESS_KEY_ID:}
+    access-key-secret: ${ALIYUN_ACCESS_KEY_SECRET:}
+    sms-sign-name: ${ALIYUN_SMS_SIGN_NAME:${SMS_SIGN_NAME:}}
+    sms-template-code: ${ALIYUN_SMS_TEMPLATE_CODE:${SMS_TEMPLATE_CODE:}}
+    oss-endpoint: ${ALIYUN_OSS_ENDPOINT:https://oss-cn-shenzhen.aliyuncs.com}
+    oss-bucket: ${OSS_BUCKET_NAME:}
+  mail:
+    from: ${SMTP_FROM:${MAIL_USERNAME:}}
+  ai:
+    enabled: ${AI_ENABLED:true}
+    chat-model: qwen-plus
+    vision-model: qwen-vl-max
+    embedding-model: text-embedding-v3
+    asset-recognition-model: ${campus.ai.vision-model}
+    duplicate-repair-model: ${campus.ai.chat-model}
+    timeout-seconds: 30
+    session-ttl-hours: 8

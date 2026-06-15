@@ -1,0 +1,35 @@
+.summary-row {
+  margin-bottom: 16px;
+}
+
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 18px 20px;
+  min-height: 96px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f6fbf9, #fff);
+  border: 1px solid #e5ece9;
+}
+
+.summary-card span {
+  color: #72827e;
+  font-size: 13px;
+}
+
+.summary-card strong {
+  color: #153d3b;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.summary-card__state {
+  font-size: 18px !important;
+}
+
+.section-card {
+  margin-bottom: 16px;
+  border-radius: 14px;
+}

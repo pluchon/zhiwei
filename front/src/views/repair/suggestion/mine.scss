@@ -1,0 +1,27 @@
+.suggestion-mine-page {
+  padding: 4px 0 16px;
+}
+
+.list-card {
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+}
+
+.list-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.suggestion-table {
+  width: 100%;
+
+  :deep(.el-table__header th) {
+    background: #f8fafc;
+  }
+}
+
+.submit-form :deep(.el-form-item) {
+  margin-bottom: 16px;
+}

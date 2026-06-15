@@ -1,0 +1,64 @@
+.sidebarLogoFade-enter-active {
+  transition: opacity 1.5s;
+}
+
+.sidebarLogoFade-enter,
+.sidebarLogoFade-leave-to {
+  opacity: 0;
+}
+
+.sidebar-logo-container {
+  position: relative;
+  height: 56px;
+  line-height: 56px;
+  background: v-bind(getLogoBackground);
+  text-align: center;
+  overflow: hidden;
+
+  & .sidebar-logo-link {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 12px;
+    box-sizing: border-box;
+
+    & .sidebar-logo {
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    & .sidebar-title {
+      display: inline-block;
+      margin: 0;
+      color: v-bind(getLogoTextColor);
+      font-weight: 700;
+      line-height: 1;
+      font-size: 18px;
+      font-family:
+        "PingFang SC",
+        "Microsoft YaHei",
+        Avenir,
+        Helvetica Neue,
+        Arial,
+        Helvetica,
+        sans-serif;
+      vertical-align: middle;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  &.collapse {
+    .sidebar-logo-link {
+      padding: 0;
+    }
+
+    .sidebar-logo {
+      margin-right: 0;
+    }
+  }
+}

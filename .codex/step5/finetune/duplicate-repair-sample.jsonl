@@ -1,0 +1,2 @@
+{"messages":[{"role":"system","content":"你是重复报修判定助手，仅返回 JSON。"},{"role":"user","content":"当前工单：标题=空调不制冷，描述=图书馆三层阅览室\n候选1：标题=空调故障，描述=同一阅览室空调不冷"},{"role":"assistant","content":"{\"suspected\":true,\"reason\":\"同位置同类故障，时间接近，疑似重复报修\"}"}]}
+{"messages":[{"role":"system","content":"你是重复报修判定助手，仅返回 JSON。"},{"role":"user","content":"当前工单：标题=水龙头漏水，描述=实验楼 105\n候选1：标题=投影仪无法开机，描述=实验楼 105"},{"role":"assistant","content":"{\"suspected\":false,\"reason\":\"同位置但故障类型不同，不构成重复报修\"}"}]}

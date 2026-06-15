@@ -1,0 +1,140 @@
+.navbar.nav3 {
+  .hamburger-container {
+    display: none !important;
+  }
+}
+
+.navbar {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  background: var(--navbar-bg);
+  border-bottom: 1px solid #d5dbe3;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  // padding: 0 8px;
+  box-sizing: border-box;
+
+  .hamburger-container {
+    line-height: 46px;
+    height: 100%;
+    cursor: pointer;
+    transition: background 0.3s;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 8px;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.025);
+    }
+  }
+
+  .breadcrumb-container {
+    flex-shrink: 0;
+  }
+
+  .topmenu-container {
+    position: absolute;
+    left: 50px;
+  }
+
+  .topbar-container {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 8px;
+  }
+
+  .right-menu {
+    height: 100%;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    &:focus {
+      outline: none;
+    }
+
+    .ai-assistant-entry {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 10px;
+      color: #278475;
+
+      &__label {
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      &__icon {
+        font-size: 18px;
+      }
+
+      &:hover {
+        color: #1f6b5f;
+      }
+    }
+
+    .right-menu-item {
+      display: inline-block;
+      padding: 0 8px;
+      height: 100%;
+      font-size: 18px;
+      color: #5a5e66;
+      vertical-align: text-bottom;
+
+      &.hover-effect {
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.025);
+        }
+      }
+    }
+
+    .avatar-container {
+      margin-right: 0px;
+      padding-right: 0px;
+
+      .avatar-wrapper {
+        margin-top: 10px;
+        right: 8px;
+        position: relative;
+
+        .user-avatar {
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+          margin-right: 8px;
+          border-radius: 50%;
+        }
+
+        .user-nickname {
+          position: relative;
+          left: 0px;
+          bottom: 10px;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        i {
+          cursor: pointer;
+          position: absolute;
+          right: -20px;
+          top: 25px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

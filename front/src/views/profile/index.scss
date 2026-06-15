@@ -1,0 +1,237 @@
+.profile-page {
+  min-height: calc(100vh - 84px);
+}
+
+.page-head span {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: #278475;
+}
+
+.page-head h2 {
+  margin: 6px 0 18px;
+  font: 34px Georgia, serif;
+  color: #153d3b;
+}
+
+.info-card,
+.security-card {
+  border: 1px solid rgba(39, 132, 117, 0.1);
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.profile-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.profile-info-table th,
+.profile-info-table td {
+  padding: 12px 14px;
+  border: 1px solid #d5dbe3;
+  color: #1a2332;
+  font-size: 13px;
+  line-height: 1.6;
+  vertical-align: middle;
+  word-break: break-word;
+}
+
+.profile-info-table th {
+  width: 96px;
+  background: #f8fafc;
+  color: #6b7280;
+  font-weight: 500;
+  text-align: left;
+}
+
+.profile-info-table .avatar-cell {
+  width: 128px;
+  padding: 16px 12px;
+  text-align: center;
+  vertical-align: middle;
+  background: #fff;
+}
+
+.avatar-uploader {
+  display: inline-flex;
+}
+
+.avatar-wrap {
+  position: relative;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.avatar-wrap :deep(.el-avatar) {
+  border: 3px solid #e8effc;
+  box-shadow: 0 8px 20px rgba(29, 78, 216, 0.1);
+  font-size: 32px;
+  font-weight: 700;
+  color: #1d4ed8;
+  background: #eef2ff;
+}
+
+.avatar-hover,
+.avatar-mask {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.avatar-hover {
+  background: rgba(15, 23, 42, 0.48);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.avatar-wrap:hover .avatar-hover {
+  opacity: 1;
+}
+
+.avatar-mask {
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.password-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.password-row :deep(.el-form-item) {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.password-row :deep(.el-input) {
+  width: 240px;
+}
+
+.password-row :deep(.el-button) {
+  margin-left: auto;
+}
+
+.accept-cell {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+
+.accept-switch {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  width: 228px;
+  height: 38px;
+  padding: 3px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  flex-shrink: 0;
+
+  &__thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: calc(50% - 3px);
+    height: calc(100% - 6px);
+    border-radius: 999px;
+    background: #ecfdf5;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+    transition:
+      transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 0.28s ease;
+    pointer-events: none;
+  }
+
+  &.is-paused &__thumb {
+    transform: translateX(100%);
+    background: #fff7ed;
+  }
+
+  &__option {
+    position: relative;
+    z-index: 1;
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 600;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: color 0.22s ease;
+
+    &.is-active {
+      color: #047857;
+    }
+
+    &:last-child.is-active {
+      color: #c2410c;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.65;
+    }
+  }
+
+  &.is-paused &__option.is-active {
+    color: #c2410c;
+  }
+
+  &.is-loading {
+    opacity: 0.72;
+    pointer-events: none;
+  }
+}
+
+.accept-meta {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accept-switch__thumb {
+    transition: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .profile-info-table {
+    display: block;
+  }
+
+  .profile-info-table tbody,
+  .profile-info-table tr,
+  .profile-info-table th,
+  .profile-info-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .profile-info-table .avatar-cell {
+    width: 100%;
+    border-bottom: none;
+  }
+
+  .profile-info-table tr + tr th {
+    border-top: none;
+  }
+
+  .password-row :deep(.el-button) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
