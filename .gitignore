@@ -40,14 +40,9 @@ pnpm-debug.log*
 **/playwright-report/
 **/playwright-output/
 **/test-results/
-!/.codex/test-results/
-!/.codex/test-results/*.md
-!/.codex/test-results/*.mjs
-!/.codex/test-results/*.js
-!/.codex/test-results/*.sql
-/.codex/test-results/*result.json
-/.codex/step*/test-fixtures/evidence-*.png
-/.codex/step*/test-fixtures/test-results/
+
+# 本地开发文档与测试脚本（不纳入版本库）
+/.codex/
 
 # 数据库导出、临时导入与测试文件
 *.sql.gz
